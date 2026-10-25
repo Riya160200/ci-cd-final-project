@@ -4,7 +4,7 @@ kind: Task
 metadata:
   name: cleanup
 spec:
-  description: This task cleans all files from the shared source workspace.
+  description: Cleanup task - removes all files, including hidden files, from the shared source workspace before pipeline execution.
   workspaces:
     - name: source
   steps:
