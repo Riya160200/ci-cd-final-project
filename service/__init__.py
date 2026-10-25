@@ -7,8 +7,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-# Add common security headers to responses.
-Talisman(app, content_security_policy=None)
+# Add common HTTP security headers without forcing HTTPS redirects in local CI tests.
+Talisman(app, force_https=False, content_security_policy=None)
 
 # Enable Cross-Origin Resource Sharing (CORS).
 CORS(app)
